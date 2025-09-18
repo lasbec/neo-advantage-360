@@ -10,8 +10,8 @@
 
         neo-1 {
             bindings = <
-&trans     &kp N1        &kp N2             &kp N3            &kp N4        &kp N5  &trans                                                         &trans   &kp N6  &kp N7        &kp N8         &kp N9         &kp N0             &trans
-&kp TAB    &kp X         &kp V              &kp L             &kp C         &kp W   &trans                                                         &trans   &kp K   &kp H         &kp G          &kp F          &kp Q              &kp MINUS
+&trans     &kp N1        &kp N2             &kp N3            &kp N4        &kp N5  &trans                                                         &mo 7    &kp N6  &kp N7        &kp N8         &kp N9         &kp N0             &trans
+&kp TAB    &kp X         &kp V              &kp L             &kp C         &kp W   &trans                                                         &to 4    &kp K   &kp H         &kp G          &kp F          &kp Q              &kp MINUS
 &mo 1      &kp U         &kp I              &kp A             &kp E         &kp O   &kp ESC           &trans  &trans    &trans  &trans             &kp ESC  &kp S   &kp N         &kp R          &kp T          &kp D              &kp Y
 &kp LSHFT  &kp LBKT      &kp SEMI           &kp SINGLE_QUOTE  &kp P         &kp Z                             &trans    &trans                              &kp B   &kp M         &kp COMMA      &kp DOT        &kp J              &kp LSHFT
 &kp LCTRL  &kp LEFT_WIN  &kp K_APPLICATION  &kp RIGHT_ALT     &kp LEFT_ALT                   &kp RET  &mo 2   &tog 3    &tog 3  &mo 2   &kp SPACE                   &kp LEFT_ALT  &kp RIGHT_ALT  &kp RIGHT_WIN  &kp K_APPLICATION  &kp RCTRL
@@ -21,7 +21,7 @@
         symbols {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &to 4   &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                          &trans    &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans    &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
@@ -31,7 +31,7 @@
         move-and-numpad {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &to 4   &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                          &trans    &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans    &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
@@ -41,7 +41,7 @@
         mouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &to 4   &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                          &trans    &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans    &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
@@ -50,18 +50,18 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 2                                                                    &mo 1  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                     &none  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 5                                                                    &mo 7  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                     &to 0  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none             &kp LCTRL  &kp LALT    &kp LGUI   &kp RCTRL             &none  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                &kp HOME    &kp PG_UP                               &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                  &kp BSPC  &kp DEL    &kp END     &kp PG_DN  &kp ENTER  &kp SPACE                 &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+&mo 6      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                  &kp BSPC  &kp DEL    &kp END     &kp PG_DN  &kp ENTER  &kp SPACE                 &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 6
             >;
         };
 
         keypad {
             bindings = <
 &kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                                    &mo 1  &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                     &none  &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                     &to 0  &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none             &kp LCTRL  &kp LALT    &kp LGUI   &kp RCTRL             &none  &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                &kp HOME    &kp PG_UP                               &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
 &mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                  &kp BSPC  &kp DEL    &kp END     &kp PG_DN  &kp ENTER  &kp KP_N0                 &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 2
@@ -71,7 +71,7 @@
         fn {
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 2                                                    &mo 1  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                                     &none  &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none                                                     &to 0  &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &none           &trans  &trans    &trans  &trans          &none  &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                          &trans    &trans                         &trans  &trans  &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans    &trans  &trans  &trans                 &trans  &trans  &trans   &trans   &trans
