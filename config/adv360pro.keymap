@@ -20,16 +20,16 @@
             bindings = <&kp LS(C) &kp O &kp M &kp P &kp U &kp T &kp E &kp R &kp SPACE &kp S &kp A &kp G &kp T &kp SPACE &kp N &kp E &kp I &kp N &kp EXCL &kp SPACE>;
             label = "GESPERRT_MELDUNG";
         };
-    };
 
-    combos {
-        compatible = "zmk,combos";
-
-        lock_keyboard {
-            bindings = <&tog 8>;
-            key-positions = <34 65 69 55>;
+        hut: hut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp SPACE>;
+            label = "HUT";
         };
     };
+
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         tap_key_or_hold_layer: tap_key_or_hold_layer {
@@ -47,21 +47,21 @@
 
         neo-1 {
             bindings = <
-&trans     &kp N1        &kp N2             &kp N3            &kp N4        &kp N5  &trans                                                         &mo 7    &kp N6  &kp N7        &kp N8         &kp N9         &kp N0             &trans
-&kp TAB    &kp X         &kp V              &kp L             &kp C         &kp W   &trans                                                         &to 4    &kp K   &kp H         &kp G          &kp F          &kp Q              &kp MINUS
-&mo 1      &kp U         &kp I              &kp A             &kp E         &kp O   &kp ESC           &trans  &trans    &trans  &trans             &kp ESC  &kp S   &kp N         &kp R          &kp T          &kp D              &tap_key_or_hold_layer 1 Z
-&kp LSHFT  &kp LBKT      &kp SEMI           &kp SINGLE_QUOTE  &kp P         &kp Y                             &trans    &trans                              &kp B   &kp M         &kp COMMA      &kp DOT        &kp J              &kp LSHFT
-&kp LCTRL  &kp LEFT_WIN  &kp K_APPLICATION  &kp RIGHT_ALT     &kp LEFT_ALT                   &kp RET  &mo 2   &to 3     &to 3   &mo 2   &kp SPACE                   &kp LEFT_ALT  &kp RIGHT_ALT  &kp RIGHT_WIN  &kp K_APPLICATION  &kp RCTRL
+&trans     &kp N1            &kp N2             &kp N3            &kp N4        &kp N5  &trans                                                         &mo 7    &kp N6  &kp N7        &kp N8         &kp N9         &kp N0             &to 8
+&kp TAB    &kp X             &kp V              &kp L             &kp C         &kp W   &trans                                                         &to 4    &kp K   &kp H         &kp G          &kp F          &kp Q              &kp MINUS
+&mo 1      &kp U             &kp I              &kp A             &kp E         &kp O   &kp ESC           &trans  &trans    &trans  &trans             &kp ESC  &kp S   &kp N         &kp R          &kp T          &kp D              &tap_key_or_hold_layer 1 Z
+&kp LSHFT  &kp LEFT_BRACKET  &kp SEMI           &kp SINGLE_QUOTE  &kp P         &kp Y                             &trans    &trans                              &kp B   &kp M         &kp COMMA      &kp DOT        &kp J              &kp LSHFT
+&kp LCTRL  &kp LEFT_WIN      &kp K_APPLICATION  &kp RIGHT_ALT     &kp LEFT_ALT                   &kp RET  &mo 2   &to 3     &to 3   &mo 2   &kp SPACE                   &kp LEFT_ALT  &kp RIGHT_ALT  &kp RIGHT_WIN  &kp K_APPLICATION  &kp RCTRL
             >;
         };
 
         symbols {
             bindings = <
-&trans  &kt F1         &kt F2            &kp F3            &kt F4                     &kp F5                 &trans                                                    &trans  &kt F6             &kp F7            &kp F8            &kp F9               &kp F10           &kp F11
-&trans  &kp LC(RA(E))  &kp LS(SLASH)     &kp RA(NUMBER_8)  &kp RA(NUMBER_9)           &kp GRAVE              &trans                                                    &to 4   &kp LS(NUMBER_1)   &kp NUBS          &kp PIPE          &kp LS(NUMBER_0)     &kp LS(NUMBER_6)  &kp F12
-&trans  &kp RA(EQUAL)  &kp LS(NUMBER_7)  &kp RA(NUMBER_7)  &kp RA(NUMBER_8)           &kp LS(RIGHT_BRACKET)  &trans          &trans  &trans    &trans  &trans          &trans  &kp LS(MINUS)      &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp SLASH            &kp LS(DOT)       &kp RA(LC(Q))
-&trans  &kp HASH       &kp LS(NUMBER_4)  &kp RA(RC(NUBS))  &kp RA(RC(RIGHT_BRACKET))  &backtick                                      &trans    &trans                          &kp RIGHT_BRACKET  &kp LA(NUMBER_5)  &kp LS(NUMBER_2)  &kp LS(NON_US_HASH)  &kp LS(COMMA)     &trans
-&trans  &trans         &trans            &trans            &trans                                                    &trans  &trans  &trans    &trans  &trans  &trans                             &trans            &trans            &trans               &trans            &trans
+&trans  &kt F1             &kt F2            &kp F3            &kt F4                 &kp F5                 &trans                                                    &trans  &kt F6             &kp F7            &kp F8            &kp F9               &kp F10           &kp F11
+&trans  &kp LC(RA(E))      &kp LS(SLASH)     &kp RA(NUMBER_8)  &kp RA(NUMBER_9)       &hut                   &trans                                                    &to 4   &kp LS(NUMBER_1)   &kp NUBS          &kp LS(NUBS)      &kp LS(NUMBER_0)     &kp LS(NUMBER_6)  &kp F12
+&trans  &kp RA(RC(MINUS))  &kp LS(NUMBER_7)  &kp RA(NUMBER_7)  &kp RA(NUMBER_0)       &kp LS(RIGHT_BRACKET)  &trans          &trans  &trans    &trans  &trans          &trans  &kp LS(MINUS)      &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp SLASH            &kp LS(DOT)       &kp RA(LC(Q))
+&trans  &kp NUHS           &kp LS(NUMBER_4)  &kp RA(RC(NUBS))  &kp RA(RIGHT_BRACKET)  &backtick                                      &trans    &trans                          &kp RIGHT_BRACKET  &kp LS(NUMBER_5)  &kp LS(NUMBER_2)  &kp LS(NON_US_HASH)  &kp LS(COMMA)     &trans
+&trans  &trans             &trans            &trans            &trans                                                &trans  &trans  &trans    &trans  &trans  &trans                             &trans            &trans            &trans               &trans            &trans
             >;
         };
 
@@ -127,7 +127,7 @@
 
         Locked {
             bindings = <
-&kp X  &kp X              &kp X              &kp X              &kp X              &kp X              &kp X                                              &kp X  &kp X              &kp X              &kp X              &kp X              &kp X              &kp X
+&kp X  &kp X              &kp X              &kp X              &kp X              &kp X              &kp X                                              &kp X  &kp X              &kp X              &kp X              &kp X              &kp X              &to 0
 &kp X  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &kp X                                              &kp X  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &kp X
 &kp X  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &kp X         &kp X  &kp X    &kp X  &kp X         &kp X  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &kp X
 &kp X  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung                       &kp X    &kp X                       &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &kp X
