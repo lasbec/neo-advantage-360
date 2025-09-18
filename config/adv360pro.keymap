@@ -13,6 +13,22 @@
             bindings = <&kp GRAVE &kp SPACE>;
             label = "BACKTICK";
         };
+
+        gesperrt_meldung: gesperrt_meldung {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp &kp LS(C) &kp O &kp M &kp P &kp U &kp T &kp E &kp R &kp SPACE &kp S &kp A &kp G &kp T &kp SPACE &kp N &kp E &kp I &kp N &kp EXCL &kp SPACE>;
+            label = "GESPERRT_MELDUNG";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        lock_keyboard {
+            bindings = <&tog 8>;
+            key-positions = <34 65 69 55>;
+        };
     };
 
     keymap {
@@ -95,6 +111,16 @@
 &none  &none         &none         &none         &none         &none         &none               &none  &none    &bt BT_CLR  &none                        &none        &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none         &none                                    &none    &none                                                 &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none                                    &none  &none  &none    &none       &bl BL_TOG  &rgb_ug RGB_TOG                      &bl BL_INC  &bl BL_DEC  &none  &none  &none
+            >;
+        };
+
+        Locked {
+            bindings = <
+&kp X  &kp X              &kp X              &kp X              &kp X              &kp X              &kp X                                              &kp X  &kp X              &kp X              &kp X              &kp X              &kp X              &kp X
+&kp X  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &kp X                                              &kp X  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &kp X
+&kp X  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &kp X         &kp X  &kp X    &kp X  &kp X         &kp X  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &kp X
+&kp X  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung                       &kp X    &kp X                       &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &gesperrt_meldung  &kp X
+&kp X  &kp X              &kp X              &kp X              &kp X                                        &kp X  &kp X  &kp X    &kp X  &kp X  &kp X                            &kp X              &kp X              &kp X              &kp X              &kp X
             >;
         };
     };
