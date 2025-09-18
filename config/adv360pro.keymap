@@ -5,6 +5,15 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    macros {
+        backtick: backtick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp SPACE>;
+            label = "BACKTICK";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -20,11 +29,11 @@
 
         symbols {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &to 4   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans    &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans    &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &kt F1         &kt F2            &kp F3            &kt F4                     &kp F5                 &trans                                                    &trans  &kt F6             &kp F7            &kp F8            &kp F9               &kp F10           &kp F11
+&trans  &kp LC(RA(E))  &kp LS(SLASH)     &kp RA(NUMBER_8)  &kp RA(NUMBER_9)           &kp GRAVE              &trans                                                    &to 4   &kp LS(NUMBER_1)   &kp NUBS          &kp PIPE          &kp LS(NUMBER_0)     &kp LS(NUMBER_6)  &kp F12
+&trans  &kp RA(EQUAL)  &kp LS(NUMBER_7)  &kp RA(NUMBER_7)  &kp RA(NUMBER_8)           &kp LS(RIGHT_BRACKET)  &trans          &trans  &trans    &trans  &trans          &trans  &kp LS(MINUS)      &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp SLASH            &kp LS(DOT)       &kp RA(LC(Q))
+&trans  &kp HASH       &kp LS(NUMBER_4)  &kp RA(RC(NUBS))  &kp RA(RC(RIGHT_BRACKET))  &backtick                                      &trans    &trans                          &kp RIGHT_BRACKET  &kp LA(NUMBER_5)  &kp LS(NUMBER_2)  &kp LS(NON_US_HASH)  &kp LS(COMMA)     &trans
+&trans  &trans         &trans            &trans            &trans                                                    &trans  &trans  &trans    &trans  &trans  &trans                             &trans            &trans            &trans               &trans            &trans
             >;
         };
 
