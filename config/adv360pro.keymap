@@ -10,15 +10,15 @@
 
         neo-1 {
             bindings = <
-&trans     &kp N1        &kp N2    &kp N3            &kp N4  &kp N5  &trans                                                         &trans   &kp N6  &kp N7  &kp N8     &kp N9   &kp N0  &trans
-&kp TAB    &kp X         &kp V     &kp L             &kp C   &kp W   &trans                                                         &trans   &kp K   &kp H   &kp G      &kp F    &kp Q   &kp MINUS
-&trans     &kp U         &kp I     &kp A             &kp E   &kp O   &kp ESC           &trans  &trans    &trans  &trans             &kp ESC  &kp S   &kp N   &kp R      &kp T    &kp D   &kp Y
-&kp LSHFT  &kp LBKT      &kp SEMI  &kp SINGLE_QUOTE  &kp P   &kp Z                             &trans    &trans                              &kp B   &kp M   &kp COMMA  &kp DOT  &kp J   &kp LSHFT
-&kp LCTRL  &kp LEFT_WIN  &trans    &trans            &trans                   &kp RET  &trans  &trans    &trans  &trans  &kp SPACE                   &trans  &trans     &trans   &trans  &kp RCTRL
+&trans     &kp N1        &kp N2             &kp N3            &kp N4        &kp N5  &trans                                                         &trans   &kp N6  &kp N7        &kp N8         &kp N9         &kp N0             &trans
+&kp TAB    &kp X         &kp V              &kp L             &kp C         &kp W   &trans                                                         &trans   &kp K   &kp H         &kp G          &kp F          &kp Q              &kp MINUS
+&mo 1      &kp U         &kp I              &kp A             &kp E         &kp O   &kp ESC           &trans  &trans    &trans  &trans             &kp ESC  &kp S   &kp N         &kp R          &kp T          &kp D              &kp Y
+&kp LSHFT  &kp LBKT      &kp SEMI           &kp SINGLE_QUOTE  &kp P         &kp Z                             &trans    &trans                              &kp B   &kp M         &kp COMMA      &kp DOT        &kp J              &kp LSHFT
+&kp LCTRL  &kp LEFT_WIN  &kp K_APPLICATION  &kp RIGHT_ALT     &kp LEFT_ALT                   &kp RET  &mo 2   &tog 3    &tog 3  &mo 2   &kp SPACE                   &kp LEFT_ALT  &kp RIGHT_ALT  &kp RIGHT_WIN  &kp K_APPLICATION  &kp RCTRL
             >;
         };
 
-        layer_5 {
+        symbols {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -28,7 +28,7 @@
             >;
         };
 
-        layer_6 {
+        move-and-numpad {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -38,7 +38,7 @@
             >;
         };
 
-        layer_7 {
+        mouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
